@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2016 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<MultiApi>
+	<API Name="getSortedShipmentDetails">
+		<Output>
+			<Shipment DeliveryMethod="" DisplayOrderNo="" DocumentType="" EnterpriseCode="" ExpectedDeliveryDate="" ExpectedShipmentDate="" OrderNo="" PickTicketPrinted="" ReceivingNode="" RequestedDeliveryDate="" RequestedShipmentDate="" ShipDate="" ShipNode="" ShipmentKey="" ShipmentNo="" Status="">
+				<ToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" Company="" Country="" DayPhone="" Department="" EMailID="" FirstName="" LastName="" MiddleName="" State="" Suffix="" Title="" ZipCode=""/>
+				<ShipNode Description="" Localecode="" ShipNode="">
+					<ShipNodePersonInfo AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" City="" Company="" Country="" DayPhone="" Department="" EMailID="" FirstName="" JobTitle="" LastName="" MiddleName="" State="" Suffix="" Title="" ZipCode=""/>
+				</ShipNode>
+				<Instructions>
+					<Instruction InstructionText="" InstructionType=""/>
+				</Instructions>
+				<ShipmentLines>
+					<ShipmentLine PickLocation="" ActualQuantity="" BackroomPickedQuantity="" DocumentType="" ItemDesc="" ItemID="" OrderNo="" ProductClass="" Quantity="" UnitOfMeasure="" DepartmentCode="">
+						<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo=""/>
+						<OrderLine IsBundleParent="" OrderLineKey="" OrderedQty="">
+							<ItemDetails ItemID="">
+								<PrimaryInformation ExtendedDisplayDescription=""/>
+							</ItemDetails>
+							<BundleParentLine OrderLineKey="" PrimeLineNo="" SubLineNo=""/>
+						</OrderLine>
+					</ShipmentLine>
+				</ShipmentLines>
+			</Shipment>
+		</Output>
+	</API>
+	<API Name="getItemUOMMasterList">
+		<Output>
+			<ItemUOMMasterList>
+				<ItemUOMMaster Description="" IsInventoryUOM="" ItemGroupCode="" OrganizationCode="" UOMType="" UnitOfMeasure=""/>
+			</ItemUOMMasterList>
+		</Output>
+	</API>
+	<API Name="getOrganizationHierarchy">
+		<Output>
+			<Organization LocaleCode=""/>
+		</Output>
+	</API>
+</MultiApi>
